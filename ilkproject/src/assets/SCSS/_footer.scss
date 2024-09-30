@@ -1,0 +1,322 @@
+footer {
+    position: relative;
+    padding: 30px;
+
+    .newsLetter {
+        // width: 80%;
+        display: flex;
+        justify-content: space-between;
+        padding: 29px;
+
+        .mainA {
+            .subscribe {
+                display: flex;
+                gap: 10px;
+
+                .envelope {
+                    color: #C4C4C4;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-family: Inter, sans-serif;
+                    color: #3b5d50;
+                }
+            }
+
+            .enter {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                input {
+                    width: 237px;
+                    height: 50px;
+                    background-color: #fff;
+                    padding: 6px 12px;
+                    border-radius: 10px;
+                }
+
+                .telegram {
+                    width: 77px;
+                    height: 49px;
+                    font-size: 16px;
+                    color: #fff;
+                    background-color: #3b5d50;
+                    padding: 12px 30px;
+                    border-radius: 10px;
+                    transition: 2s;
+
+                    &:hover {
+                        background-color: #314D43;
+                    }
+                }
+            }
+
+        }
+
+        .sofa {
+
+            img {
+                width: 380px;
+                height: 328px;
+                position: absolute;
+                top: -7rem;
+                right: 0;
+                z-index: 100;
+                // margin-top:30px
+            }
+        }
+    }
+
+    .main {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        // flex-direction: column;
+        .furni {
+            display: flex;
+            width: 400px;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+
+            a {
+                color: #3b5d50;
+                font-size: 32px;
+                font-family: Inter, sans-serif;
+            }
+
+            p {
+                color: #6a6a6a;
+                font-size: 14px;
+                font-family: Inter, sans-serif;
+            }
+
+            .icons {
+                display: flex;
+                gap: 10px;
+
+                .iconFa {
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    display: inline-block;
+                    background: #dce5e4;
+                    color: #3b5d50;
+                    border-radius: 50%;
+                    transition: .2s;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover {
+                        background-color: #3b5d50;
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+
+            #list {
+                padding: 30px;
+
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+
+                    li {
+                        a {
+                            color: #2f2f2f;
+                            font-size: 14px;
+                            font-family: Inter, sans-serif;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .firstLine,
+        .secLine {
+            display: flex;
+        }
+
+    }
+
+    .copyright {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 28px;
+        justify-content: space-between;
+        border-top: black solid 1px;
+
+        .copy {
+            p {
+                color: #6a6a6a;
+                font-size: 14px;
+                font-family: Inter, sans-serif;
+            }
+        }
+
+        .terms {
+            display: flex;
+            gap: 15px;
+
+            a {
+                color: #2f2f2f;
+                font-size: 14px;
+                font-family: Inter, sans-serif;
+            }
+        }
+    }
+
+}
+
+@media(max-width:1200px) {
+    .modernInterior {
+        h1 {
+            font-size: 40px !important;
+        }
+    }
+
+    #sofa {
+        width: 373px;
+        height: 361px;
+    }
+}
+
+@media(max-width:991px) {
+    header {
+        transition: 0.5s;
+        height: auto;
+
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    .brand {
+        justify-content: space-between;
+        width: 90%;
+
+        .burger {
+            display: block !important;
+        }
+    }
+
+    .navBar {
+        display: none !important;
+        align-items: start !important;
+        width: 100%;
+
+    }
+
+    header .container .navBar nav ul li a::after {
+        display: none;
+        visibility: hidden;
+    }
+
+    .homePage .container {
+        flex-wrap: wrap;
+    }
+}
+
+
+.showMenu {
+    display: flex !important;
+    flex-direction: column;
+    transition: 0.7s all;
+    padding: 25px;
+
+
+    ul {
+        flex-direction: column;
+    }
+    
+.homePage .container .modernInterior {
+    width: auto;
+    letter-spacing: 1.5px;
+}
+
+footer .newsLetter .sofa img {
+    width: 236px !important;
+    height: 195px !important;
+}
+
+footer .newsLetter {
+    padding: 30px 0 0 0;
+}
+
+footer .main .furni {
+    width: auto;
+}
+
+.chairsGeneral {
+    flex-wrap: wrap;
+
+    .material {
+        width: auto !important;
+
+    }
+
+    .chair {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            height: auto !important;
+        }
+
+        .png {
+            height: 477px !important;
+            width: 477px !important;
+        }
+    }
+}
+
+.homePage .container .photos::after {
+    top: auto;
+    bottom: 48px !important;
+}
+
+#sofa {
+    width: 500px;
+    height: 420px;
+}
+
+}
+
+
+
+
+
+@media(max-width:600px) {
+    footer .newsLetter .sofa img {
+        display: none;
+    }
+
+    .list {
+        justify-content: center;
+    }
+
+    .png {
+        height: 360px !important;
+        width: 297px !important;
+    }
+
+    #sofa {
+        width: 303px;
+        height: 329px;
+    }
+}

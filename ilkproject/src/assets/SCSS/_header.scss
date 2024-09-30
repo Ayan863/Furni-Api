@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+// font-family: Inter,sans-serif;
+
+header {
+    background-color: #3B5D50;
+    height: 84px;
+    width: 100%;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    .container {
+       display: flex;
+       width: 80%;
+       align-items: center;
+       justify-content: space-between;
+        .brand {
+            display: flex;
+            a {
+                color: #fff;
+                font-size: 32px;
+                font-family: Inter, sans-serif;
+                font-weight: 600;
+                span {
+                    opacity: 0.4;
+                }
+            }
+            .burger{
+                color: #fff;
+                width: 30px;
+                height: 30px;
+                display: none;
+            }
+        }
+        
+        .navBar {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            nav {
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        position: relative;
+                        padding: 8px;
+                        a{
+                            font-weight: 600;
+                            color: #fff;
+                            font-size: 14px;
+                            font-family: Inter, sans-serif;
+                            transition: 0.2s;
+                            opacity: 0.4;
+                            &.home {
+                                opacity: 1;
+                                &::after{
+                                    visibility: visible !important;
+                                    width: 100%;
+                                }
+                            }
+                            &:hover {
+                                opacity: 1;
+                                
+                            }
+                            &::after{
+                                content: "";
+                                width: 0;
+                                height: 4px;
+                                background-color: #f9bf29;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                visibility: hidden;
+                            }
+                            &:hover{
+                                opacity: 1;
+                                &::after{
+                                    visibility: visible;
+                                    animation: headerNav 0.3s forwards;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .icons{
+                display: flex;
+                gap:30px;
+                // height: 20px;
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    width: 18px;
+                    height: 20px;
+                }
+                .cart{
+                    height: 23px;
+                    width: 24px;
+                }
+            }
+        }
+    }
+}
+@keyframes headerNav{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
