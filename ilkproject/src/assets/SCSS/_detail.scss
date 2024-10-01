@@ -1,0 +1,58 @@
+// header .container .navBar nav ul li a.home 
+.detail {
+    h2 {
+        font-size: 60px;
+        font-family: Inter, sans-serif;
+        color: #2f2f2f;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .cardDetail {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        // background-color: black;
+        img {
+            width: 407px;
+            height: 400px;
+        }
+
+        .txt {
+            width: 514px;
+
+            .about {
+                padding: 15px;
+                h3 {
+                    // padding: 15px;
+                    font-weight: 400;
+                    color: #2f2f2f;
+                    font-size: 47px;
+                    font-family: Inter, sans-serif;
+
+                }
+
+                span {
+                    h5{
+                        font-weight: 400;
+                        color: #2f2f2f;
+                        font-size: 20px;
+                        font-family: Inter, sans-serif;
+    
+                    }
+                    font-size: 14px;
+                    font-family: Inter, sans-serif;
+                }
+            }
+
+            span {
+                padding: 15px;
+                span{
+                    color: red;
+                }
+            }
+
+
+        }
+    }
+}

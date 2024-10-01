@@ -492,10 +492,16 @@ footer .copyright .terms a {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   height: 442px;
   gap: 10px;
   width: 300px;
+}
+.products .chairsGeneral .chair .card .txt h3 {
+  padding: 5px;
+}
+.products .chairsGeneral .chair .card .txt span {
+  padding: 5px;
 }
 .products .chairsGeneral .chair .card img {
   width: 300px;
@@ -510,7 +516,7 @@ footer .copyright .terms a {
   font-size: 16px;
   font-family: Inter, sans-serif;
 }
-.products .chairsGeneral .chair .card .txt strong {
+.products .chairsGeneral .chair .card .txt span {
   color: #2f2f2f;
   font-size: 18px;
   font-family: Inter, sans-serif;
@@ -548,6 +554,7 @@ footer .copyright .terms a {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  left: 46%;
 }
 .products .chairsGeneral .chair .card .plusImg .plus {
   width: 17px;
@@ -599,4 +606,48 @@ footer .copyright .terms a {
     height: 216px !important;
     width: 216px !important;
   }
+}
+.detail h2 {
+  font-size: 60px;
+  font-family: Inter, sans-serif;
+  color: #2f2f2f;
+  padding: 30px;
+  text-align: center;
+}
+.detail .cardDetail {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.detail .cardDetail img {
+  width: 407px;
+  height: 400px;
+}
+.detail .cardDetail .txt {
+  width: 514px;
+}
+.detail .cardDetail .txt .about {
+  padding: 15px;
+}
+.detail .cardDetail .txt .about h3 {
+  font-weight: 400;
+  color: #2f2f2f;
+  font-size: 47px;
+  font-family: Inter, sans-serif;
+}
+.detail .cardDetail .txt .about span {
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+}
+.detail .cardDetail .txt .about span h5 {
+  font-weight: 400;
+  color: #2f2f2f;
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+}
+.detail .cardDetail .txt span {
+  padding: 15px;
+}
+.detail .cardDetail .txt span span {
+  color: red;
 }

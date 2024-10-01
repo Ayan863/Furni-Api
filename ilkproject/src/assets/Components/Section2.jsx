@@ -1,19 +1,19 @@
 import React from "react";
-import axios from "axios"
+import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Section2 = () => {
   const [data, setData] = useState([]);
-
-  useEffect(()=>{
-    getApi()
-  },[])
-  const getApi=()=>{
-    axios.get("https://fakestoreapi.com/products")
-    .then((res)=>{
-        setData(res.data)
-        // console.log(res.data);
-    })
-  }
+  const navigate = useNavigate();
+  useEffect(() => {
+    getApi();
+  }, []);
+  const getApi = async () => {
+    await axios.get("https://fakestoreapi.com/products").then(async (res) => {
+      await setData(res.data);
+    });
+  };
 
   return (
     <section className="products">
@@ -28,61 +28,25 @@ const Section2 = () => {
           <button>Explore</button>
         </div>
         <div className="chair">
-         
-            {
-              data && data.map((item)=>(
-                <div className="card" key={item.id}>
-                <img src={item.image} alt="" className="png"/>
-            <div className="txt">
-            <h3>{item.title}</h3>
-            <strong>{item.price}$</strong>
-            </div>
-            <div className="plusImg">
-              <img
-                src="https://themewagon.github.io/furni/images/cross.svg"
-                className="plus"
-                alt=""
-              />
-            </div>
-            </div>
-              ))
-            }
-            
-          
-          {/* <div className="card">
-            <img
-              src="https://themewagon.github.io/furni/images/product-2.png"
-              alt="" className="png"
-            />
-            <div className="txt">
-            <h3>Kruzo Aero Chair</h3>
-            <strong>$78.00</strong>
-            </div>
-            <div className="plusImg">
-              <img
-                src="https://themewagon.github.io/furni/images/cross.svg"
-                className="plus"
-                alt="" 
-              />
-            </div>
-          </div> */}
-          {/* <div className="card">
-            <img
-              src="https://themewagon.github.io/furni/images/product-3.png"
-              alt="" className="png"
-            />
-            <div className="txt">
-            <h3>Ergonomic Chair</h3>
-            <strong>$43.00</strong>
-            </div>
-            <div className="plusImg">
-              <img
-                src="https://themewagon.github.io/furni/images/cross.svg"
-                className="plus"
-                alt=""
-              />
-            </div>
-          </div> */}
+          {data &&
+            data.map((item) => (
+              <div className="card" key={item.id}>
+                <img src={item.image} alt="" className="png" />
+                <div className="txt">
+                  <h3 onClick={() => navigate(`/detail/${item.id}`)}>
+                    {item.title}
+                  </h3>
+                  <span>{item.price}$</span>
+                </div>
+                <div className="plusImg">
+                  <img
+                    src="https://themewagon.github.io/furni/images/cross.svg"
+                    className="plus"
+                    alt=""
+                  />
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </section>

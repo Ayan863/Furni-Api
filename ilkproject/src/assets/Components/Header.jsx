@@ -2,7 +2,9 @@
 import React, { useRef } from "react";
 import "../../../../assets/css/main.css";
 import { CiMenuBurger } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   const navbar = useRef(null);
   const handleMenuClick = () => {
     if (navbar.current) {
@@ -24,7 +26,7 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <a href="#" className="home">
+                <a href="#" className="home" onClick={() => navigate("/")}>
                   Home
                 </a>
               </li>
